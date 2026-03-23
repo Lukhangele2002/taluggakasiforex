@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Trading Robot Store</title>
+  <!-- Google Search Console verification -->
+  <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE_HERE">
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; margin: 50px; }
+    h1 { color: #333; }
+    .btn {
+      padding: 12px 25px;
+      background: #28a745;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+    .btn:hover { background: #218838; }
+  </style>
+</head>
+<body>
+  <h1>Welcome to My Trading Robot Store</h1>
+  <p>Purchase the robot below and get instant download access.</p>
+
+  <!-- PayFast payment form -->
+  <form action="https://www.payfast.co.za/eng/process" method="post">
+    <!-- Replace with your actual Merchant ID and Key -->
+    <input type="hidden" name="merchant_id" value="YOUR_MERCHANT_ID">
+    <input type="hidden" name="merchant_key" value="YOUR_MERCHANT_KEY">
+
+    <!-- Redirect after payment -->
+    <input type="hidden" name="return_url" value="https://lukhangele2002.github.io/taluggakasiforex/thankyou.html">
+
+    <!-- Transaction details -->
+    <input type="hidden" name="amount" value="500.00">
+    <input type="hidden" name="item_name" value="Trading Robot">
+
+    <!-- Payment button -->
+    <button type="submit" class="btn">Buy Now</button>
+  </form>
+</body>
+</html>
