@@ -3,33 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <title>Cognac Blueberry Scalper</title>
-
-  <!-- Google Search Console verification -->
-  <meta name="google-site-verification" content="y6sHCfPokcQKNh6bNXnt5GagZJ2fVI8dJyRogp49ZMs" />
-
-  <!-- Responsive design -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-  <h1>Welcome to Cognac Blueberry Scalper</h1>
-  <p>Buy your robot securely via PayFast below.</p>
 
-  <!-- PayFast payment form -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+    h1 { color: #333; }
+    .btn {
+      padding: 15px 30px;
+      background: #28a745;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    .btn:hover { background: #218838; }
+  </style>
+</head>
+
+<body>
+
+  <h1>Welcome to Cognac Blueberry Scalper</h1>
+  <p>Secure your trading bot below.</p>
+
   <form action="https://www.payfast.co.za/eng/process" method="post">
-    <!-- Replace with your actual Merchant ID and Key -->
+    
+    <!-- 🔑 Replace these with your real credentials -->
     <input type="hidden" name="merchant_id" value="YOUR_MERCHANT_ID">
     <input type="hidden" name="merchant_key" value="YOUR_MERCHANT_KEY">
 
-    <!-- Redirect after payment -->
+    <!-- Payment tracking -->
+    <input type="hidden" name="m_payment_id" id="payment_id">
+
+    <!-- Redirects -->
     <input type="hidden" name="return_url" value="https://lukhangele2002.github.io/taluggakasiforex/thankyou.html">
     <input type="hidden" name="cancel_url" value="https://lukhangele2002.github.io/taluggakasiforex/cancel.html">
 
-    <!-- Transaction details -->
+    <!-- Product -->
     <input type="hidden" name="amount" value="500.00">
     <input type="hidden" name="item_name" value="Cognac Blueberry Scalper">
 
-    <!-- Payment button -->
-    <button type="submit" class="btn">Buy Now</button>
+    <!-- Buyer email -->
+    <input 
+      type="email" 
+      name="email_address" 
+      placeholder="Enter your email" 
+      required 
+      style="padding:10px; margin:10px; width:280px;"
+    >
+
+    <br><br>
+
+    <button type="submit" class="btn">Buy Now - R500</button>
   </form>
+
+  <script>
+    document.getElementById("payment_id").value = "order_" + Date.now();
+  </script>
+
 </body>
 </html>
