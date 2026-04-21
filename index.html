@@ -5,7 +5,8 @@
   <title>Cognac Blueberry Scalper</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google Search Console Verification -->
+  <!-- SEO + Google Verification -->
+  <meta name="description" content="Cognac Blueberry Scalper - Trading education, CPI & NFP fundamentals, and market insights.">
   <meta name="google-site-verification" content="-ywetkx9vw3mKoJ_iRwbIbFU-sXLumApTnkNsI-BZaA" />
 
   <style>
@@ -39,11 +40,11 @@
       padding: 15px 30px;
       background: #00d4ff;
       color: #000;
-      border: none;
       border-radius: 5px;
       font-size: 18px;
       cursor: pointer;
       text-decoration: none;
+      border: none;
     }
 
     .btn.secondary {
@@ -70,12 +71,6 @@
       box-shadow: 0 0 20px rgba(0,212,255,0.2);
     }
 
-    .tradingview-widget-container {
-      margin: 30px auto;
-      width: 100%;
-      max-width: 1000px;
-    }
-
     .closing {
       margin: 60px 0;
       font-size: 18px;
@@ -87,113 +82,110 @@
 
 <body>
 
-  <!-- Welcome -->
-  <div class="section-box">
-    <h1>Welcome to <span class="highlight">Cognac Blueberry Scalper</span></h1>
-    <p class="lead">
-      News in, trades out. Meet the new jack of all news, so-called fundamentals.<br>
-      Welcome to Cognac Blueberry Scalper by <span class="highlight">taLugga injamfwethu</span>.<br>
-      Shayi bag over everything Njayam.
-    </p>
-  </div>
+<!-- WELCOME -->
+<div class="section-box">
+  <h1>Welcome to <span class="highlight">Cognac Blueberry Scalper</span></h1>
+  <p class="lead">
+    News in, trades out. Fundamentals simplified.<br>
+    Built by <span class="highlight">taLugga injamfwethu</span>.
+  </p>
+</div>
 
-  <!-- BUY -->
-  <div class="section-box">
-    <h2>Cognac Blueberry Scalper</h2>
+<!-- BUY -->
+<div class="section-box">
+  <h2>Cognac Blueberry Scalper</h2>
 
-    <form action="payfast.php" method="post" onsubmit="setOrderId(this)">
-      <input type="hidden" name="m_payment_id" class="order-id">
+  <form action="payfast.php" method="post" onsubmit="setOrderId(this)">
+    <input type="hidden" name="m_payment_id" class="order-id">
+    <input type="hidden" name="amount" value="3000.00">
+    <input type="hidden" name="item_name" value="Cognac Blueberry Scalper">
 
-      <input type="hidden" name="amount" value="3000.00">
-      <input type="hidden" name="item_name" value="Cognac Blueberry Scalper">
+    <input type="email" name="email_address" placeholder="Enter your email" required>
+    <br><br>
 
-      <input type="email" name="email_address" placeholder="Enter your email" required>
-      <br><br>
+    <button type="submit" class="btn">Buy Now - R3000</button>
+  </form>
+</div>
 
-      <button type="submit" class="btn">Buy Now - R3000</button>
-    </form>
-  </div>
+<!-- FUNDAMENTALS -->
+<div class="section-box">
+  <h2>Fundamentals Introduction</h2>
+  <p class="lead">
+    CPI measures inflation impact on markets.<br><br>
+    CPI → 2nd Wednesday monthly<br>
+    NFP → 1st Friday monthly<br><br>
+    Time: 14:30 – 15:30
+  </p>
+</div>
 
-  <!-- FUNDAMENTALS -->
-  <div class="section-box">
-    <h2>Fundamentals Introduction</h2>
-    <p class="lead">
-      CPI is an economic event that measures inflation and impacts the markets significantly.<br><br>
-      Fundamentals occur every <strong>Wednesday of the second week of every month</strong>.<br>
-      NFP occurs every <strong>first Friday of every month</strong>.<br><br>
-      Event times vary between <strong>14:30 and 15:30</strong>.
-    </p>
-  </div>
+<!-- SUBSCRIPTION -->
+<div class="section-box">
+  <h2>Subscription CPI & NFP</h2>
 
-  <!-- SUBSCRIPTION -->
-  <div class="section-box">
-    <h2>Subscription CPI & NFP</h2>
+  <form action="payfast.php" method="post" onsubmit="setOrderId(this)">
+    <input type="hidden" name="m_payment_id" class="order-id">
+    <input type="hidden" name="amount" value="500.00">
+    <input type="hidden" name="item_name" value="CPI & NFP Subscription">
 
-    <form action="payfast.php" method="post" onsubmit="setOrderId(this)">
-      <input type="hidden" name="m_payment_id" class="order-id">
+    <input type="email" name="email_address" placeholder="Enter your email" required>
+    <br><br>
 
-      <input type="hidden" name="amount" value="500.00">
-      <input type="hidden" name="item_name" value="CPI & NFP Subscription">
+    <button type="submit" class="btn secondary">Pay Now - R500</button>
+  </form>
+</div>
 
-      <input type="email" name="email_address" placeholder="Enter your email" required>
-      <br><br>
+<!-- PAIRS -->
+<div class="section-box">
+  <h2>Recommended Pairs</h2>
+  <p class="lead">NASDAQ & XAUUSD (Gold)</p>
+</div>
 
-      <button type="submit" class="btn secondary">Pay Now - R500</button>
-    </form>
-  </div>
+<!-- CHART -->
+<div class="section-box">
+  <h2>Live XAUUSD Chart</h2>
+  <div id="tradingview_xauusd"></div>
+</div>
 
-  <!-- PAIRS -->
-  <div class="section-box">
-    <h2>Recommended Pairs</h2>
-    <p class="lead">NASDAQ and XAUUSD (Gold)</p>
-  </div>
+<!-- CONTACT -->
+<div class="section-box">
+  <h2>Contact Us</h2>
 
-  <!-- CHART -->
-  <div class="section-box">
-    <h2>Live XAUUSD Chart</h2>
-    <div class="tradingview-widget-container">
-      <div id="tradingview_xauusd"></div>
-    </div>
-  </div>
+  <a href="https://wa.me/27677389452" class="btn">WhatsApp</a>
 
-  <!-- CONTACT -->
-  <div class="section-box">
-    <h2>Contact Us</h2>
+  <p class="lead">
+    <a href="mailto:cognacblueberryscalpersupport@gmail.com" style="color:#00d4ff;">
+      cognacblueberryscalpersupport@gmail.com
+    </a>
+  </p>
+</div>
 
-    <a href="https://wa.me/27677389452" class="btn">Chat on WhatsApp</a>
+<!-- CLOSING -->
+<div class="closing">
+  Danki, thank you, enkosi  
+  Shayi bag over everything Njayam
+</div>
 
-    <p class="lead">
-  <a href="mailto:cognacblueberryscalpersupport@gmail.com" style="color:#00d4ff;">
-    cognacblueberryscalpersupport@gmail.com
-  </a>
-</p>
+<!-- SCRIPTS -->
+<script src="https://s3.tradingview.com/tv.js"></script>
 
-  <!-- CLOSING -->
-  <div class="closing">
-    Danki, thank you, enkosi  
-    Danki is thank you bafethu!
-  </div>
+<script>
+  function setOrderId(form) {
+    form.querySelector(".order-id").value =
+      "order_" + Date.now() + "_" + Math.floor(Math.random() * 1000);
+  }
 
-  <script src="https://s3.tradingview.com/tv.js"></script>
-
-  <script>
-    function setOrderId(form) {
-      form.querySelector(".order-id").value =
-        "order_" + Date.now() + "_" + Math.floor(Math.random() * 1000);
-    }
-
-    new TradingView.widget({
-      "width": "100%",
-      "height": 400,
-      "symbol": "OANDA:XAUUSD",
-      "interval": "60",
-      "timezone": "Etc/UTC",
-      "theme": "dark",
-      "style": "1",
-      "locale": "en",
-      "container_id": "tradingview_xauusd"
-    });
-  </script>
+  new TradingView.widget({
+    "width": "100%",
+    "height": 400,
+    "symbol": "OANDA:XAUUSD",
+    "interval": "60",
+    "timezone": "Etc/UTC",
+    "theme": "dark",
+    "style": "1",
+    "locale": "en",
+    "container_id": "tradingview_xauusd"
+  });
+</script>
 
 </body>
 </html>
